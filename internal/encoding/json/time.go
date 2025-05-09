@@ -2,7 +2,7 @@
 package json
 
 import (
-	"github.com/stainless-sdks/rzp-go/internal/encoding/json/shims"
+	"github.com/KarthikBoddeda/rzp-go/internal/encoding/json/shims"
 	"reflect"
 	"time"
 )

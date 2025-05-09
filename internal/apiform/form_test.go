@@ -2,7 +2,7 @@ package apiform
 
 import (
 	"bytes"
-	"github.com/stainless-sdks/rzp-go/packages/param"
+	"github.com/KarthikBoddeda/rzp-go/packages/param"
 	"io"
 	"mime/multipart"
 	"strings"

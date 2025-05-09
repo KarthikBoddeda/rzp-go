@@ -3,8 +3,8 @@
 package rzp
 
 import (
-	"github.com/stainless-sdks/rzp-go/internal/apierror"
-	"github.com/stainless-sdks/rzp-go/packages/param"
+	"github.com/KarthikBoddeda/rzp-go/internal/apierror"
+	"github.com/KarthikBoddeda/rzp-go/packages/param"
 )
 
 // aliased to make [param.APIUnion] private when embedding

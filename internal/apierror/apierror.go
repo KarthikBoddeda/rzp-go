@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"net/http/httputil"
 
-	"github.com/stainless-sdks/rzp-go/internal/apijson"
-	"github.com/stainless-sdks/rzp-go/packages/respjson"
+	"github.com/KarthikBoddeda/rzp-go/internal/apijson"
+	"github.com/KarthikBoddeda/rzp-go/packages/respjson"
 )
 
 // Error represents an error that originates from the API, i.e. when a request is

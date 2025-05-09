@@ -8,11 +8,11 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/stainless-sdks/rzp-go/internal/apijson"
-	"github.com/stainless-sdks/rzp-go/internal/requestconfig"
-	"github.com/stainless-sdks/rzp-go/option"
-	"github.com/stainless-sdks/rzp-go/packages/param"
-	"github.com/stainless-sdks/rzp-go/packages/respjson"
+	"github.com/KarthikBoddeda/rzp-go/internal/apijson"
+	"github.com/KarthikBoddeda/rzp-go/internal/requestconfig"
+	"github.com/KarthikBoddeda/rzp-go/option"
+	"github.com/KarthikBoddeda/rzp-go/packages/param"
+	"github.com/KarthikBoddeda/rzp-go/packages/respjson"
 )
 
 // PaymentLinkService contains methods and other services that help with

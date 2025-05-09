@@ -7,9 +7,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/stainless-sdks/rzp-go"
-	"github.com/stainless-sdks/rzp-go/internal/testutil"
-	"github.com/stainless-sdks/rzp-go/option"
+	"github.com/KarthikBoddeda/rzp-go"
+	"github.com/KarthikBoddeda/rzp-go/internal/testutil"
+	"github.com/KarthikBoddeda/rzp-go/option"
 )
 
 func TestUsage(t *testing.T) {
