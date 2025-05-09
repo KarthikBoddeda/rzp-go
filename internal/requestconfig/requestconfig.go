@@ -18,10 +18,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/stainless-sdks/rzp-go/internal"
-	"github.com/stainless-sdks/rzp-go/internal/apierror"
-	"github.com/stainless-sdks/rzp-go/internal/apiform"
-	"github.com/stainless-sdks/rzp-go/internal/apiquery"
+	"github.com/KarthikBoddeda/rzp-go/internal"
+	"github.com/KarthikBoddeda/rzp-go/internal/apierror"
+	"github.com/KarthikBoddeda/rzp-go/internal/apiform"
+	"github.com/KarthikBoddeda/rzp-go/internal/apiquery"
 )
 
 func getDefaultHeaders() map[string]string {

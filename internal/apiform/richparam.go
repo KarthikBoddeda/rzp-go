@@ -1,7 +1,7 @@
 package apiform
 
 import (
-	"github.com/stainless-sdks/rzp-go/packages/param"
+	"github.com/KarthikBoddeda/rzp-go/packages/param"
 	"mime/multipart"
 	"reflect"
 )

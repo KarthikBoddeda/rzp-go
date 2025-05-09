@@ -3,8 +3,8 @@ package apijson_test
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/stainless-sdks/rzp-go/internal/apijson"
-	"github.com/stainless-sdks/rzp-go/packages/param"
+	"github.com/KarthikBoddeda/rzp-go/internal/apijson"
+	"github.com/KarthikBoddeda/rzp-go/packages/param"
 	"reflect"
 	"testing"
 )

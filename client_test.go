@@ -10,9 +10,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/stainless-sdks/rzp-go"
-	"github.com/stainless-sdks/rzp-go/internal"
-	"github.com/stainless-sdks/rzp-go/option"
+	"github.com/KarthikBoddeda/rzp-go"
+	"github.com/KarthikBoddeda/rzp-go/internal"
+	"github.com/KarthikBoddeda/rzp-go/option"
 )
 
 type closureTransport struct {
