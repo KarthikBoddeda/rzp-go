@@ -54,8 +54,9 @@ func main() {
 		option.WithPassword("My Password"), // defaults to os.LookupEnv("RZP_PASSWORD")
 	)
 	paymentLink, err := client.PaymentLinks.New(context.TODO(), rzp.PaymentLinkNewParams{
-		Amount:   1000,
-		Currency: "INR",
+		Amount:      1000,
+		Currency:    "INR",
+		Description: "Payment for policy no",
 	})
 	if err != nil {
 		panic(err.Error())
@@ -296,8 +297,9 @@ To handle errors, we recommend that you use the `errors.As` pattern:
 
 ```go
 _, err := client.PaymentLinks.New(context.TODO(), rzp.PaymentLinkNewParams{
-	Amount:   1000,
-	Currency: "INR",
+	Amount:      1000,
+	Currency:    "INR",
+	Description: "Payment for policy no",
 })
 if err != nil {
 	var apierr *rzp.Error
@@ -326,8 +328,9 @@ defer cancel()
 client.PaymentLinks.New(
 	ctx,
 	rzp.PaymentLinkNewParams{
-		Amount:   1000,
-		Currency: "INR",
+		Amount:      1000,
+		Currency:    "INR",
+		Description: "Payment for policy no",
 	},
 	// This sets the per-retry timeout
 	option.WithRequestTimeout(20*time.Second),
@@ -365,8 +368,9 @@ client := rzp.NewClient(
 client.PaymentLinks.New(
 	context.TODO(),
 	rzp.PaymentLinkNewParams{
-		Amount:   1000,
-		Currency: "INR",
+		Amount:      1000,
+		Currency:    "INR",
+		Description: "Payment for policy no",
 	},
 	option.WithMaxRetries(5),
 )
@@ -383,8 +387,9 @@ var response *http.Response
 paymentLink, err := client.PaymentLinks.New(
 	context.TODO(),
 	rzp.PaymentLinkNewParams{
-		Amount:   1000,
-		Currency: "INR",
+		Amount:      1000,
+		Currency:    "INR",
+		Description: "Payment for policy no",
 	},
 	option.WithResponseInto(&response),
 )
