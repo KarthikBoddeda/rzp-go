@@ -26,8 +26,9 @@ func TestUsage(t *testing.T) {
 		option.WithPassword("My Password"),
 	)
 	paymentLink, err := client.PaymentLinks.New(context.TODO(), rzp.PaymentLinkNewParams{
-		Amount:   1000,
-		Currency: "INR",
+		Amount:      1000,
+		Currency:    "INR",
+		Description: "Payment for policy no",
 	})
 	if err != nil {
 		t.Fatalf("err should be nil: %s", err.Error())
