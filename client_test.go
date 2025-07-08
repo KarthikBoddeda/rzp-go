@@ -10,9 +10,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/stainless-sdks/rzp-go"
-	"github.com/stainless-sdks/rzp-go/internal"
-	"github.com/stainless-sdks/rzp-go/option"
+	"github.com/KarthikBoddeda/rzp-go"
+	"github.com/KarthikBoddeda/rzp-go/internal"
+	"github.com/KarthikBoddeda/rzp-go/option"
 )
 
 type closureTransport struct {
@@ -40,8 +40,9 @@ func TestUserAgentHeader(t *testing.T) {
 		}),
 	)
 	client.PaymentLinks.New(context.Background(), rzp.PaymentLinkNewParams{
-		Amount:   1000,
-		Currency: "INR",
+		Amount:      1000,
+		Currency:    "INR",
+		Description: "Payment for policy no",
 	})
 	if userAgent != fmt.Sprintf("Rzp/Go %s", internal.PackageVersion) {
 		t.Errorf("Expected User-Agent to be correct, but got: %#v", userAgent)
@@ -68,8 +69,9 @@ func TestRetryAfter(t *testing.T) {
 		}),
 	)
 	_, err := client.PaymentLinks.New(context.Background(), rzp.PaymentLinkNewParams{
-		Amount:   1000,
-		Currency: "INR",
+		Amount:      1000,
+		Currency:    "INR",
+		Description: "Payment for policy no",
 	})
 	if err == nil {
 		t.Error("Expected there to be a cancel error")
@@ -107,8 +109,9 @@ func TestDeleteRetryCountHeader(t *testing.T) {
 		option.WithHeaderDel("X-Stainless-Retry-Count"),
 	)
 	_, err := client.PaymentLinks.New(context.Background(), rzp.PaymentLinkNewParams{
-		Amount:   1000,
-		Currency: "INR",
+		Amount:      1000,
+		Currency:    "INR",
+		Description: "Payment for policy no",
 	})
 	if err == nil {
 		t.Error("Expected there to be a cancel error")
@@ -141,8 +144,9 @@ func TestOverwriteRetryCountHeader(t *testing.T) {
 		option.WithHeader("X-Stainless-Retry-Count", "42"),
 	)
 	_, err := client.PaymentLinks.New(context.Background(), rzp.PaymentLinkNewParams{
-		Amount:   1000,
-		Currency: "INR",
+		Amount:      1000,
+		Currency:    "INR",
+		Description: "Payment for policy no",
 	})
 	if err == nil {
 		t.Error("Expected there to be a cancel error")
@@ -174,8 +178,9 @@ func TestRetryAfterMs(t *testing.T) {
 		}),
 	)
 	_, err := client.PaymentLinks.New(context.Background(), rzp.PaymentLinkNewParams{
-		Amount:   1000,
-		Currency: "INR",
+		Amount:      1000,
+		Currency:    "INR",
+		Description: "Payment for policy no",
 	})
 	if err == nil {
 		t.Error("Expected there to be a cancel error")
@@ -201,8 +206,9 @@ func TestContextCancel(t *testing.T) {
 	cancelCtx, cancel := context.WithCancel(context.Background())
 	cancel()
 	_, err := client.PaymentLinks.New(cancelCtx, rzp.PaymentLinkNewParams{
-		Amount:   1000,
-		Currency: "INR",
+		Amount:      1000,
+		Currency:    "INR",
+		Description: "Payment for policy no",
 	})
 	if err == nil {
 		t.Error("Expected there to be a cancel error")
@@ -225,8 +231,9 @@ func TestContextCancelDelay(t *testing.T) {
 	cancelCtx, cancel := context.WithTimeout(context.Background(), 2*time.Millisecond)
 	defer cancel()
 	_, err := client.PaymentLinks.New(cancelCtx, rzp.PaymentLinkNewParams{
-		Amount:   1000,
-		Currency: "INR",
+		Amount:      1000,
+		Currency:    "INR",
+		Description: "Payment for policy no",
 	})
 	if err == nil {
 		t.Error("expected there to be a cancel error")
@@ -255,8 +262,9 @@ func TestContextDeadline(t *testing.T) {
 			}),
 		)
 		_, err := client.PaymentLinks.New(deadlineCtx, rzp.PaymentLinkNewParams{
-			Amount:   1000,
-			Currency: "INR",
+			Amount:      1000,
+			Currency:    "INR",
+			Description: "Payment for policy no",
 		})
 		if err == nil {
 			t.Error("expected there to be a deadline error")

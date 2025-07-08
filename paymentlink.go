@@ -8,11 +8,11 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/stainless-sdks/rzp-go/internal/apijson"
-	"github.com/stainless-sdks/rzp-go/internal/requestconfig"
-	"github.com/stainless-sdks/rzp-go/option"
-	"github.com/stainless-sdks/rzp-go/packages/param"
-	"github.com/stainless-sdks/rzp-go/packages/respjson"
+	"github.com/KarthikBoddeda/rzp-go/internal/apijson"
+	"github.com/KarthikBoddeda/rzp-go/internal/requestconfig"
+	"github.com/KarthikBoddeda/rzp-go/option"
+	"github.com/KarthikBoddeda/rzp-go/packages/param"
+	"github.com/KarthikBoddeda/rzp-go/packages/respjson"
 )
 
 // PaymentLinkService contains methods and other services that help with
@@ -163,12 +163,12 @@ type PaymentLinkNewParams struct {
 	Amount int64 `json:"amount,required"`
 	// ISO currency code
 	Currency string `json:"currency,required"`
+	// Description of the payment link
+	Description string `json:"description,required"`
 	// Allow partial payments
 	AcceptPartial param.Opt[bool] `json:"accept_partial,omitzero"`
 	// Redirect URL after payment
 	CallbackURL param.Opt[string] `json:"callback_url,omitzero"`
-	// Description of the payment link
-	Description param.Opt[string] `json:"description,omitzero"`
 	// Unix timestamp when the link expires
 	ExpireBy param.Opt[int64] `json:"expire_by,omitzero"`
 	// Minimum amount for the first partial payment

@@ -2,7 +2,7 @@ package apijson
 
 import (
 	"errors"
-	"github.com/stainless-sdks/rzp-go/packages/param"
+	"github.com/KarthikBoddeda/rzp-go/packages/param"
 	"reflect"
 
 	"github.com/tidwall/gjson"

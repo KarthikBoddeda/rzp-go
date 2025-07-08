@@ -7,9 +7,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/stainless-sdks/rzp-go"
-	"github.com/stainless-sdks/rzp-go/internal/testutil"
-	"github.com/stainless-sdks/rzp-go/option"
+	"github.com/KarthikBoddeda/rzp-go"
+	"github.com/KarthikBoddeda/rzp-go/internal/testutil"
+	"github.com/KarthikBoddeda/rzp-go/option"
 )
 
 func TestUsage(t *testing.T) {
@@ -26,8 +26,9 @@ func TestUsage(t *testing.T) {
 		option.WithPassword("My Password"),
 	)
 	paymentLink, err := client.PaymentLinks.New(context.TODO(), rzp.PaymentLinkNewParams{
-		Amount:   1000,
-		Currency: "INR",
+		Amount:      1000,
+		Currency:    "INR",
+		Description: "Payment for policy no",
 	})
 	if err != nil {
 		t.Fatalf("err should be nil: %s", err.Error())

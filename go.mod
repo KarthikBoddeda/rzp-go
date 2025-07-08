@@ -1,4 +1,4 @@
-module github.com/stainless-sdks/rzp-go
+module github.com/KarthikBoddeda/rzp-go
 
 go 1.21
 

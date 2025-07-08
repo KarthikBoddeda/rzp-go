@@ -13,7 +13,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/stainless-sdks/rzp-go/packages/param"
+	"github.com/KarthikBoddeda/rzp-go/packages/param"
 )
 
 var encoders sync.Map // map[encoderEntry]encoderFunc
@@ -448,4 +448,18 @@ func (e *encoder) newMapEncoder(_ reflect.Type) encoderFunc {
 	return func(key string, value reflect.Value, writer *multipart.Writer) error {
 		return e.encodeMapEntries(key, value, writer)
 	}
+}
+
+func WriteExtras(writer *multipart.Writer, extras map[string]any) (err error) {
+	for k, v := range extras {
+		str, ok := v.(string)
+		if !ok {
+			break
+		}
+		err = writer.WriteField(k, str)
+		if err != nil {
+			break
+		}
+	}
+	return
 }

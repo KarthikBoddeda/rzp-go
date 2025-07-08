@@ -41,7 +41,7 @@ To use a local version of this library from source in another project, edit the 
 directive. This can be done through the CLI with the following:
 
 ```sh
-$ go mod edit -replace github.com/stainless-sdks/rzp-go=/path/to/rzp-go
+$ go mod edit -replace github.com/KarthikBoddeda/rzp-go=/path/to/rzp-go
 ```
 
 ## Running tests

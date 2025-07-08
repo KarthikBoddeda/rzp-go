@@ -1,8 +1,8 @@
 package paramutil
 
 import (
-	"github.com/stainless-sdks/rzp-go/packages/param"
-	"github.com/stainless-sdks/rzp-go/packages/respjson"
+	"github.com/KarthikBoddeda/rzp-go/packages/param"
+	"github.com/KarthikBoddeda/rzp-go/packages/respjson"
 )
 
 func AddrIfPresent[T comparable](v param.Opt[T]) *T {

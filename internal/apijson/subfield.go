@@ -1,7 +1,7 @@
 package apijson
 
 import (
-	"github.com/stainless-sdks/rzp-go/packages/respjson"
+	"github.com/KarthikBoddeda/rzp-go/packages/respjson"
 	"reflect"
 )
 

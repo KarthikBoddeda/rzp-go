@@ -8,9 +8,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/stainless-sdks/rzp-go"
-	"github.com/stainless-sdks/rzp-go/internal/testutil"
-	"github.com/stainless-sdks/rzp-go/option"
+	"github.com/KarthikBoddeda/rzp-go"
+	"github.com/KarthikBoddeda/rzp-go/internal/testutil"
+	"github.com/KarthikBoddeda/rzp-go/option"
 )
 
 func TestPaymentLinkNewWithOptionalParams(t *testing.T) {
@@ -30,6 +30,7 @@ func TestPaymentLinkNewWithOptionalParams(t *testing.T) {
 	_, err := client.PaymentLinks.New(context.TODO(), rzp.PaymentLinkNewParams{
 		Amount:         1000,
 		Currency:       "INR",
+		Description:    "Payment for policy no",
 		AcceptPartial:  rzp.Bool(true),
 		CallbackMethod: rzp.PaymentLinkNewParamsCallbackMethodGet,
 		CallbackURL:    rzp.String("https://example-callback-url.com/"),
@@ -38,7 +39,6 @@ func TestPaymentLinkNewWithOptionalParams(t *testing.T) {
 			Email:   rzp.String("gaurav.kumar@example.com"),
 			Name:    rzp.String("Gaurav Kumar"),
 		},
-		Description:           rzp.String("Payment for policy no"),
 		ExpireBy:              rzp.Int(1691097057),
 		FirstMinPartialAmount: rzp.Int(100),
 		Notes: map[string]string{

@@ -1,7 +1,7 @@
 package rzp
 
 import (
-	"github.com/stainless-sdks/rzp-go/packages/param"
+	"github.com/KarthikBoddeda/rzp-go/packages/param"
 	"io"
 	"time"
 )

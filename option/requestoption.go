@@ -12,7 +12,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/stainless-sdks/rzp-go/internal/requestconfig"
+	"github.com/KarthikBoddeda/rzp-go/internal/requestconfig"
 	"github.com/tidwall/sjson"
 )
 
@@ -20,7 +20,7 @@ import (
 // which can be supplied to clients, services, and methods. You can read more about this functional
 // options pattern in our [README].
 //
-// [README]: https://pkg.go.dev/github.com/stainless-sdks/rzp-go#readme-requestoptions
+// [README]: https://pkg.go.dev/github.com/KarthikBoddeda/rzp-go#readme-requestoptions
 type RequestOption = requestconfig.RequestOption
 
 // WithBaseURL returns a RequestOption that sets the BaseURL for the client.
@@ -263,7 +263,7 @@ func WithRequestTimeout(dur time.Duration) RequestOption {
 // environment to be the "production" environment. An environment specifies which base URL
 // to use by default.
 func WithEnvironmentProduction() RequestOption {
-	return WithBaseURL("https://api.razorpay.com/v1/")
+	return requestconfig.WithDefaultBaseURL("https://api.razorpay.com/v1/")
 }
 
 // WithUsername returns a RequestOption that sets the client setting "username".
